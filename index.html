@@ -6,8 +6,8 @@
   <title>PlotIN — Interactive Graph Generator</title>
   <meta name="description" content="PlotIN is a clean, engineer‑friendly graph generator: paste or import Excel/CSV, drag & rename legend, math‑style labels, and export to SVG/PDF/PNG/EMF." />
   <!-- App icons (put the provided PNG at /assets/PlotIN.png) -->
-  <link rel="icon" type="image/png" href="/assets/PlotIN.png" />
-  <link rel="apple-touch-icon" href="/assets/PlotIN.png" />
+  <link rel="icon" type="image/png" href="assets/PlotIN.png" />
+  <link rel="apple-touch-icon" href="assets/PlotIN.png" />
   <!-- TailwindCSS CDN (single-file deploy) -->
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
@@ -48,7 +48,7 @@
           Plot<span class="brand-green">IN</span> — publication‑ready, <span class="underline decoration-[var(--brand-green)]/30 decoration-4 underline-offset-4">minimal & clear</span>
         </h1>
         <p class="mt-5 text-lg text-slate-700 leading-relaxed">
-          Import Excel/CSV or paste data, drag the legend, rename series inline, use math‑style labels (Greek, subscripts, exponents), and export to <span class="font-semibold">SVG, PDF, PNG, and EMF</span>.
+          Paste data, drag the legend, rename series inline, use math‑style labels (Greek, subscripts, exponents), and export to <span class="font-semibold">SVG, PDF, PNG, and EMF</span>.
         </p>
         <div class="mt-8 flex flex-wrap gap-3">
           <a id="download-cta" href="#download" class="inline-flex items-center gap-2 rounded-xl bg-[var(--brand-green)] text-white px-5 py-3 font-semibold shadow hover:opacity-90">
@@ -64,14 +64,41 @@
             GitHub
           </a>
         </div>
-        <p class="mt-3 text-sm text-slate-500">Replace <code>nicknsts</code> with your GitHub user/org.</p>
+        
       </div>
       <div class="relative">
-        <div class="aspect-[16/10] w-full overflow-hidden rounded-2xl ring-1 ring-slate-200 shadow-sm bg-white grid place-items-center">
-          <!-- Use your provided PNG as the hero visual until real screenshots are added -->
-          <img src="/assets/PlotIN.png" alt="PlotIN logo" class="h-40 w-40 object-contain" onerror="this.src='https://dummyimage.com/256x256/f8fafc/0f172a.png&text=PlotIN+logo';"/>
+        <div class="aspect-[16/10] w-full overflow-hidden rounded-2xl ring-1 ring-slate-200 shadow-sm bg-white">
+          <div class="h-full w-full grid md:grid-cols-3 grid-cols-1">
+            <div class="p-6 border-b md:border-b-0 md:border-r border-slate-100 flex items-center gap-4">
+              <div class="rounded-xl bg-[var(--bg-soft)] p-3 ring-1 ring-slate-200">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="8" y="2" width="8" height="4" rx="1.5"></rect><rect x="5" y="6" width="14" height="16" rx="2"></rect></svg>
+              </div>
+              <div>
+                <div class="font-semibold">Paste data</div>
+                <div class="text-sm text-slate-600">Auto header + X–Y pairing</div>
+              </div>
+            </div>
+            <div class="p-6 border-b md:border-b-0 md:border-r border-slate-100 flex items-center gap-4">
+              <div class="rounded-xl bg-[var(--bg-soft)] p-3 ring-1 ring-slate-200">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 2v20M2 12h20"></path></svg>
+              </div>
+              <div>
+                <div class="font-semibold">Drag legend</div>
+                <div class="text-sm text-slate-600">Inline rename series</div>
+              </div>
+            </div>
+            <div class="p-6 flex items-center gap-4">
+              <div class="rounded-xl bg-[var(--bg-soft)] p-3 ring-1 ring-slate-200">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              </div>
+              <div>
+                <div class="font-semibold">Export</div>
+                <div class="text-sm text-slate-600">SVG, PDF, PNG, EMF</div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="absolute -bottom-4 left-4 rounded-xl bg-white shadow ring-1 ring-slate-200 px-4 py-2 text-sm font-medium">Drag & rename legend</div>
+        <div class="absolute -bottom-4 right-4 rounded-xl bg-white shadow ring-1 ring-slate-200 px-4 py-2 text-sm font-medium">Clean, publication-ready figures</div>
       </div>
     </div>
   </section>
@@ -83,8 +110,8 @@
       <p class="mt-3 text-slate-600 max-w-3xl">Everything you need for reproducible, publication‑grade figures in a friendly GUI.</p>
       <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         <div class="rounded-2xl border border-slate-200 p-6 bg-slate-50">
-          <h3 class="font-semibold">Excel/CSV import & smart paste</h3>
-          <p class="mt-2 text-sm text-slate-600">Header detection, separator auto‑detect, sheet selection, robust X‑Y pairing.</p>
+          <h3 class="font-semibold">Smart paste parser</h3>
+          <p class="mt-2 text-sm text-slate-600">Robust paste parser with header auto‑detect and X‑Y pairing.</p>
         </div>
         <div class="rounded-2xl border border-slate-200 p-6 bg-slate-50">
           <h3 class="font-semibold">Draggable legend + inline rename</h3>
@@ -117,16 +144,14 @@
         <h2 class="text-3xl font-bold tracking-tight text-slate-900">How it looks</h2>
         <a href="https://github.com/nicknsts/PlotIN/releases" target="_blank" class="text-[var(--brand-green)] font-semibold hover:underline">Releases →</a>
       </div>
-      <div class="mt-8 grid gap-6 sm:grid-cols-2">
-        <figure class="rounded-2xl overflow-hidden bg-white ring-1 ring-slate-200 shadow-sm">
-          <img src="/assets/screen-legend.png" alt="Legend drag & rename" class="w-full h-auto" onerror="this.src='https://dummyimage.com/800x500/ffffff/e2e8f0.png&text=Legend+drag%2Brename';"/>
-          <figcaption class="p-4 text-sm text-slate-600">Legend freely movable with inline rename.</figcaption>
-        </figure>
-        <figure class="rounded-2xl overflow-hidden bg-white ring-1 ring-slate-200 shadow-sm">
-          <img src="/assets/screen-export.png" alt="Export multi-format" class="w-full h-auto" onerror="this.src='https://dummyimage.com/800x500/ffffff/e2e8f0.png&text=Export+SVG%2FPDF%2FPNG%2FEMF';"/>
-          <figcaption class="p-4 text-sm text-slate-600">One‑click export to standard formats.</figcaption>
-        </figure>
+      <div class="mt-8 rounded-2xl overflow-hidden bg-white ring-1 ring-slate-200 shadow-sm h-72 md:h-80">
+        <video class="w-full h-full object-contain" autoplay loop muted playsinline preload="metadata" poster="assets/screen-legend.png">
+          <source src="assets/plotin-hero.webm" type="video/webm">
+          <source src="assets/plotin-hero.mp4" type="video/mp4">
+          <img src="assets/screen-legend.png" alt="PlotIN preview" class="w-full h-full object-contain">
+        </video>
       </div>
+      <p class="mt-3 text-sm text-slate-600">Paste data → drag legend → inline rename → export (SVG, PDF, PNG, EMF).</p>
     </div>
   </section>
 
@@ -155,7 +180,6 @@
           <ul class="mt-4 space-y-2 text-sm text-slate-700">
             <li>• SVG/PDF/PNG/EMF export</li>
             <li>• Drag & inline rename legend</li>
-            <li>• Excel multi‑sheet import</li>
             <li>• Priority bugfix & features</li>
           </ul>
           <a href="#contact" class="mt-6 inline-block w-full text-center rounded-xl bg-[var(--brand-green)] text-white px-4 py-2 font-semibold hover:opacity-90">Get license</a>
@@ -172,7 +196,7 @@
         <a href="https://github.com/nicknsts/PlotIN/releases" target="_blank" class="inline-flex items-center gap-2 rounded-xl bg-[var(--brand-green)] text-white px-5 py-3 font-semibold shadow hover:opacity-90">Releases</a>
         <a href="https://github.com/nicknsts/PlotIN" target="_blank" class="inline-flex items-center gap-2 rounded-xl border border-slate-300 bg-white px-5 py-3 font-semibold hover:bg-slate-50">Repository</a>
       </div>
-      <p class="mt-3 text-xs text-slate-500">Search & replace <code>nicknsts</code> with your GitHub handle (3 places).</p>
+      
     </div>
   </section>
 
@@ -202,28 +226,23 @@
   </section>
 
   <!-- Contact -->
-  <section id=\"contact\" class=\"py-16\">
-    <div class=\"mx-auto max-w-6xl px-4 grid gap-8 md:grid-cols-1\"">
+  <section id="contact" class="py-16">
+    <div class="mx-auto max-w-6xl px-4 grid gap-8 md:grid-cols-1 text-center">
       <div>
         <h2 class="text-3xl font-bold tracking-tight text-slate-900">Contact & support</h2>
         <p class="mt-3 text-slate-600">Questions, bugs, feature ideas? Open an issue or send an email.</p>
-        <div class="mt-6 flex flex-wrap gap-3">
+        <div class="mt-6 flex flex-wrap gap-3 justify-center">
           <a href="https://github.com/nicknsts/PlotIN/issues" target="_blank" class="inline-flex items-center gap-2 rounded-xl border border-slate-300 bg-white px-5 py-3 font-semibold hover:bg-slate-50">GitHub Issues</a>
-          <a href="mailto:contact@example.com" class="inline-flex items-center gap-2 rounded-xl bg-slate-900 text-white px-5 py-3 font-semibold hover:bg-black">Email</a>
+          <a href="mailto:nastasnicu@gmail.com" class="inline-flex items-center gap-2 rounded-xl bg-slate-900 text-white px-5 py-3 font-semibold hover:bg-black">Email</a>
         </div>
-        <p class="mt-3 text-xs text-slate-500">Replace the email with your real address.</p>
+        
       </div></div>
   </section>
 
   <!-- Footer -->
   <footer class="py-10 border-t border-slate-200/60 bg-white">
-    <div class="mx-auto max-w-6xl px-4 text-sm text-slate-500 flex flex-col md:flex-row items-center justify-between gap-3">
+    <div class="mx-auto max-w-6xl px-4 text-sm text-slate-500 flex flex-col md:flex-row items-center md:items-start justify-center gap-3">
       <div>© <span id="year"></span> <span class="brand-dark font-semibold">Plot</span><span class="brand-green font-bold">IN</span>. All rights reserved.</div>
-      <div class="flex items-center gap-4">
-        <a href="https://github.com/nicknsts/PlotIN" target="_blank" class="hover:text-slate-700">GitHub</a>
-        <a href="#" class="hover:text-slate-700">Privacy</a>
-        <a href="#" class="hover:text-slate-700">Terms</a>
-      </div>
     </div>
   </footer>
 
