@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "last_updated_utc": "2025-12-01T10:00:00Z",
+
+  "app": {
+    "latest_version": "1.1",
+    "min_supported_version": "1.0",
+    "download_url": "https://plotin.dev/download",
+    "changelog_url": "https://plotin.dev/changelog",
+    "channel": "stable"
+  },
+
+  "message": {
+    "enabled": true,
+    "title": "New version available",
+    "body": "PlotIN 1.2.0 includes bug fixes and improvements.\nWe recommend updating to the latest version.",
+    "severity": "info",
+    "link_label": "Open download page",
+    "link_url": "https://plotin.dev/download"
+  },
+
+  "ui": {
+    "show_donation_button": true,
+    "donation_button": {
+      "text": "Support PlotIN development",
+      "tooltip": "Open the donation page in your browser.",
+      "url": "https://plotin.dev/donate"
+    },
+
+    "show_pro_badge": false,
+    "pro_badge": {
+      "text": "PRO available",
+      "tooltip": "Discover PlotIN PRO features."
+    },
+
+    "banner": {
+      "enabled": true,
+      "text": "PlotIN is free for academic and personal use.",
+      "severity": "info"
+    },
+
+    "dialogs": {
+      "update_available": {
+        "title": "Update available",
+        "body": "A newer version of PlotIN is available.\nDo you want to open the download page?",
+        "ok_text": "Open",
+        "cancel_text": "Later"
+      },
+      "unsupported_version": {
+        "title": "Unsupported version",
+        "body": "Your PlotIN version is no longer supported.\nPlease update to continue receiving fixes.",
+        "ok_text": "Open download page"
+      }
+    }
+  },
+
+  "flags": {
+    "enable_experimental_features": false,
+    "enable_advanced_export_options": true
+  }
+}
