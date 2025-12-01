@@ -3,10 +3,10 @@
   "last_updated_utc": "2025-12-01T10:00:00Z",
 
   "app": {
-    "latest_version": "1.1",
+    "latest_version": "1.0",
     "min_supported_version": "1.0",
-    "download_url": "https://plotin.dev/download",
-    "changelog_url": "https://plotin.dev/changelog",
+    "download_url": "https://github.com/nicknsts/PlotIN/releases",
+    "changelog_url": "https://github.com/nicknsts/PlotIN/releases",
     "channel": "stable"
   },
 
@@ -16,7 +16,7 @@
     "body": "PlotIN 1.2.0 includes bug fixes and improvements.\nWe recommend updating to the latest version.",
     "severity": "info",
     "link_label": "Open download page",
-    "link_url": "https://plotin.dev/download"
+    "link_url": "https://github.com/nicknsts/PlotIN/releases"
   },
 
   "ui": {
