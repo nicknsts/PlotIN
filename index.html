@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>PlotIN — Interactive Graph Generator</title>
-  <meta name="description" content="PlotIN is a clean, engineer‑friendly graph generator: paste or import Excel/CSV, drag & rename legend, math‑style labels, and export to SVG/PDF/PNG/EMF." />
+  <title>PlotIN — Interactive Graph Generator (Student)</title>
+  <meta name="description" content="PlotIN is a clean, engineer-friendly plotting tool: paste tabular data, drag & rename the legend, use math-style labels, and export plots as SVG/PDF/PNG/EMF. Portable, no install, works offline." />
   <!-- App icons (put the provided PNG at /assets/PlotIN.png) -->
   <link rel="icon" type="image/png" href="assets/PlotIN.png" />
   <link rel="apple-touch-icon" href="assets/PlotIN.png" />
@@ -32,8 +32,8 @@
       <nav class="hidden md:flex items-center gap-6 text-sm">
         <a href="#features" class="hover:text-[var(--brand-green)]">Features</a>
         <a href="#screens" class="hover:text-[var(--brand-green)]">Screenshots</a>
-        <a href="#pricing" class="hover:text-[var(--brand-green)]">Pricing</a>
         <a href="#faq" class="hover:text-[var(--brand-green)]">FAQ</a>
+        <a href="#donate" class="inline-flex items-center gap-2 rounded-xl border border-slate-300 bg-white px-4 py-2 font-medium hover:bg-slate-50">Donate</a>
         <a href="#download" class="inline-flex items-center gap-2 rounded-xl bg-[var(--brand-green)] text-white px-4 py-2 font-medium shadow hover:opacity-90">Download</a>
       </nav>
     </div>
@@ -43,13 +43,19 @@
   <section class="relative">
     <div class="mx-auto max-w-6xl px-4 py-16 grid gap-10 md:grid-cols-2 md:items-center">
       <div>
-        <p class="inline-flex items-center rounded-full bg-soft text-[var(--brand-green)] px-3 py-1 text-xs font-semibold">Engineering‑grade plotting GUI</p>
+        <p class="inline-flex items-center rounded-full bg-soft text-[var(--brand-green)] px-3 py-1 text-xs font-semibold">Engineering-grade plotting GUI</p>
         <h1 class="mt-4 text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-900">
-          Plot<span class="brand-green">IN</span> — publication‑ready, <span class="underline decoration-[var(--brand-green)]/30 decoration-4 underline-offset-4">minimal & clear</span>
+          Plot<span class="brand-green">IN</span> — publication-ready, <span class="underline decoration-[var(--brand-green)]/30 decoration-4 underline-offset-4">minimal &amp; clear</span>
         </h1>
         <p class="mt-5 text-lg text-slate-700 leading-relaxed">
-          Paste data, drag the legend, rename series inline, use math‑style labels (Greek, subscripts, exponents), and export to <span class="font-semibold">SVG, PDF, PNG, and EMF</span>.
+          Paste tabular data, get an instant plot, then drag the legend, rename series inline, use math-style labels (Greek, subscripts, exponents), and export as
+          <span class="font-semibold">SVG, PDF, PNG or EMF</span>.
         </p>
+
+        <p class="mt-2 inline-flex items-center rounded-full bg-soft text-[var(--brand-green)] px-3 py-1 text-xs font-semibold">
+          Student — Free version (portable, no install)
+        </p>
+
         <div class="mt-8 flex flex-wrap gap-3">
           <a id="download-cta" href="#download" class="inline-flex items-center gap-2 rounded-xl bg-[var(--brand-green)] text-white px-5 py-3 font-semibold shadow hover:opacity-90">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="-ml-1">
@@ -64,8 +70,9 @@
             GitHub
           </a>
         </div>
-        
       </div>
+
+      <!-- Hero mini-steps -->
       <div class="relative">
         <div class="aspect-[16/10] w-full overflow-hidden rounded-2xl ring-1 ring-slate-200 shadow-sm bg-white">
           <div class="h-full w-full grid md:grid-cols-3 grid-cols-1">
@@ -84,7 +91,7 @@
               </div>
               <div>
                 <div class="font-semibold">Drag legend</div>
-                <div class="text-sm text-slate-600">Inline rename series</div>
+                <div class="text-sm text-slate-600">Resize, move, show / hide</div>
               </div>
             </div>
             <div class="p-6 flex items-center gap-4">
@@ -93,12 +100,14 @@
               </div>
               <div>
                 <div class="font-semibold">Export</div>
-                <div class="text-sm text-slate-600">SVG, PDF, PNG, EMF</div>
+                <div class="text-sm text-slate-600">SVG, PDF, PNG or EMF</div>
               </div>
             </div>
           </div>
         </div>
-        <div class="absolute -bottom-4 right-4 rounded-xl bg-white shadow ring-1 ring-slate-200 px-4 py-2 text-sm font-medium">Clean, publication-ready figures</div>
+        <div class="absolute -bottom-4 right-4 rounded-xl bg-white shadow ring-1 ring-slate-200 px-4 py-2 text-sm font-medium">
+          Clean, publication-ready figures
+        </div>
       </div>
     </div>
   </section>
@@ -106,32 +115,53 @@
   <!-- Features -->
   <section id="features" class="py-16 bg-white border-t border-b border-slate-200/60">
     <div class="mx-auto max-w-6xl px-4">
-      <h2 class="text-3xl font-bold tracking-tight text-slate-900">Key features</h2>
-      <p class="mt-3 text-slate-600 max-w-3xl">Everything you need for reproducible, publication‑grade figures in a friendly GUI.</p>
+      <h2 class="text-3xl font-bold tracking-tight text-slate-900">Key features (Student)</h2>
+      <p class="mt-3 text-slate-600 max-w-3xl">
+        Generate plots instantly by paste, then adjust only what you need: legend, axes, fonts and export format.
+      </p>
       <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <!-- Paste workflow -->
         <div class="rounded-2xl border border-slate-200 p-6 bg-slate-50">
-          <h3 class="font-semibold">Smart paste parser</h3>
-          <p class="mt-2 text-sm text-slate-600">Robust paste parser with header auto‑detect and X‑Y pairing.</p>
+          <h3 class="font-semibold">Paste-based workflow</h3>
+          <p class="mt-2 text-sm text-slate-600">
+            Paste tabular data (e.g. from Excel/CSV). PlotIN auto-detects headers and builds X–Y series for you.
+          </p>
         </div>
+        <!-- Legend & series names -->
         <div class="rounded-2xl border border-slate-200 p-6 bg-slate-50">
-          <h3 class="font-semibold">Draggable legend + inline rename</h3>
-          <p class="mt-2 text-sm text-slate-600">Place the legend anywhere and rename series directly on the plot.</p>
+          <h3 class="font-semibold">Legend &amp; series names</h3>
+          <p class="mt-2 text-sm text-slate-600">
+            Drag the legend, change its size, rename series inline, and show/hide the legend without digging through menus.
+          </p>
         </div>
+        <!-- Math labels -->
         <div class="rounded-2xl border border-slate-200 p-6 bg-slate-50">
-          <h3 class="font-semibold">Math‑style labels</h3>
-          <p class="mt-2 text-sm text-slate-600">Greek letters, subscripts, exponents, and scientific units (Ω, °C, μ).</p>
+          <h3 class="font-semibold">Math-style labels</h3>
+          <p class="mt-2 text-sm text-slate-600">
+            Greek letters, subscripts, exponents and scientific units (Ω, °C, μ) using Matplotlib mathtext.
+          </p>
         </div>
+        <!-- Axes & fonts -->
         <div class="rounded-2xl border border-slate-200 p-6 bg-slate-50">
-          <h3 class="font-semibold">Academic style & tight margins</h3>
-          <p class="mt-2 text-sm text-slate-600">Optional grid, auto‑tight X axis, 6–8 visible tick values for clarity.</p>
+          <h3 class="font-semibold">Axes &amp; font control</h3>
+          <p class="mt-2 text-sm text-slate-600">
+            Use Figure options (General &amp; Axes tabs) to adjust axis limits, label fonts, tick density and hide or show axes/ticks.
+          </p>
         </div>
+        <!-- Zoom & pan -->
         <div class="rounded-2xl border border-slate-200 p-6 bg-slate-50">
-          <h3 class="font-semibold">Multi‑format export</h3>
-          <p class="mt-2 text-sm text-slate-600">SVG, PDF, PNG, and EMF (via SVG conversion) — ready for reports.</p>
+          <h3 class="font-semibold">Zoom &amp; navigation toolbar</h3>
+          <p class="mt-2 text-sm text-slate-600">
+            Zoom horizontally or vertically, pan, and use Back/Forward, Home (short &amp; long press) to navigate views safely.
+          </p>
         </div>
+        <!-- Export & portability -->
         <div class="rounded-2xl border border-slate-200 p-6 bg-slate-50">
-          <h3 class="font-semibold">Performance‑minded</h3>
-          <p class="mt-2 text-sm text-slate-600">Preview inside the same window, manual adjust before saving, no glitches.</p>
+          <h3 class="font-semibold">Export &amp; portability</h3>
+          <p class="mt-2 text-sm text-slate-600">
+            Export plots as SVG, PDF, PNG or EMF (via SVG conversion). One format per export in the Student version.
+            PlotIN is shipped as a portable executable on Windows and macOS: no installation required, works fully offline.
+          </p>
         </div>
       </div>
     </div>
@@ -151,39 +181,9 @@
           <img src="assets/screen-legend.png" alt="PlotIN preview" class="w-full h-full object-contain">
         </video>
       </div>
-      <p class="mt-3 text-sm text-slate-600">Paste data → drag legend → inline rename → export (SVG, PDF, PNG, EMF).</p>
-    </div>
-  </section>
-
-  <!-- Pricing / License -->
-  <section id="pricing" class="py-16 bg-gradient-to-b from-white to-slate-50 border-t border-slate-200/60">
-    <div class="mx-auto max-w-6xl px-4">
-      <h2 class="text-3xl font-bold tracking-tight text-slate-900">Straightforward licensing</h2>
-      <p class="mt-3 text-slate-600">Start free, then pick what fits your workflow.</p>
-      <div class="mt-10 grid gap-6 md:grid-cols-2">
-        <div class="rounded-2xl border border-slate-200 bg-white p-6">
-          <h3 class="text-lg font-semibold">Demo</h3>
-          <p class="mt-1 text-sm text-slate-600">Core features. No card.</p>
-          <p class="mt-4"><span class="text-3xl font-extrabold">Free</span><span class="text-slate-500"> / 7 days</span></p>
-          <ul class="mt-4 space-y-2 text-sm text-slate-700">
-            <li>• Import & preview</li>
-            <li>• SVG/PNG export</li>
-            <li>• Series/size limits</li>
-          </ul>
-          <a href="#download" class="mt-6 inline-block w-full text-center rounded-xl border border-slate-300 px-4 py-2 font-semibold hover:bg-slate-50">Get demo</a>
-        </div>
-        <div class="rounded-2xl border-2 border-[var(--brand-green)] bg-white p-6 shadow-lg">
-          <div class="inline-flex items-center gap-2 rounded-full bg-soft text-[var(--brand-green)] px-3 py-1 text-xs font-semibold">Recommended</div>
-          <h3 class="mt-3 text-lg font-semibold">Pro (subscription)</h3>
-          <p class="mt-1 text-sm text-slate-600">Regular updates & support.</p>
-          <p class="mt-4"><span class="text-3xl font-extrabold">€</span><span class="text-slate-500"> / month</span></p>
-          <ul class="mt-4 space-y-2 text-sm text-slate-700">
-            <li>• SVG/PDF/PNG/EMF export</li>
-            <li>• Drag & inline rename legend</li>
-            <li>• Priority bugfix & features</li>
-          </ul>
-          <a href="#contact" class="mt-6 inline-block w-full text-center rounded-xl bg-[var(--brand-green)] text-white px-4 py-2 font-semibold hover:opacity-90">Get license</a>
-        </div></div>
+      <p class="mt-3 text-sm text-slate-600">
+        Paste data → drag legend → inline rename → adjust axes → export as SVG, PDF, PNG or EMF.
+      </p>
     </div>
   </section>
 
@@ -191,37 +191,107 @@
   <section id="download" class="py-16">
     <div class="mx-auto max-w-6xl px-4 text-center">
       <h2 class="text-3xl font-bold tracking-tight text-slate-900">Download Plot<span class="brand-green">IN</span></h2>
-      <p class="mt-3 text-slate-600">Official builds are published on GitHub Releases.</p>
+      <p class="mt-3 text-slate-600">
+        Official Student builds (portable executables) are published on GitHub Releases.
+      </p>
       <div class="mt-6 flex flex-wrap items-center justify-center gap-3">
-        <a href="https://github.com/nicknsts/PlotIN/releases" target="_blank" class="inline-flex items-center gap-2 rounded-xl bg-[var(--brand-green)] text-white px-5 py-3 font-semibold shadow hover:opacity-90">Releases</a>
-        <a href="https://github.com/nicknsts/PlotIN" target="_blank" class="inline-flex items-center gap-2 rounded-xl border border-slate-300 bg-white px-5 py-3 font-semibold hover:bg-slate-50">Repository</a>
+        <a href="https://github.com/nicknsts/PlotIN/releases" target="_blank" class="inline-flex items-center gap-2 rounded-xl bg-[var(--brand-green)] text-white px-5 py-3 font-semibold shadow hover:opacity-90">
+          Releases
+        </a>
+        <a href="https://github.com/nicknsts/PlotIN" target="_blank" class="inline-flex items-center gap-2 rounded-xl border border-slate-300 bg-white px-5 py-3 font-semibold hover:bg-slate-50">
+          Repository
+        </a>
       </div>
-      
+      <p class="mt-3 text-xs text-slate-500">
+        Works fully offline. Internet is recommended when downloading new versions and receiving improvements.
+      </p>
     </div>
   </section>
 
   <!-- FAQ -->
-  <section id="faq" class="py-16 border-t border-slate-200/60 bg-white">
+  <section id="faq" class="py-16">
     <div class="mx-auto max-w-6xl px-4">
       <h2 class="text-3xl font-bold tracking-tight text-slate-900">FAQ</h2>
-      <div class="mt-8 grid gap-6 md:grid-cols-2">
-        <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+
+      <div class="mt-8 grid gap-4 md:grid-cols-2">
+        <!-- Math / LaTeX-style labels -->
+        <div class="rounded-2xl border border-slate-200 bg-white p-6">
+          <h3 class="font-semibold">Math / LaTeX-style labels?</h3>
+          <p class="mt-2 text-sm text-slate-600">
+            Yes. PlotIN supports Greek letters (<code>\\alpha</code>, <code>\\Omega</code>), subscripts (<code>V_{out}</code>), exponents
+            (<code>x^2</code>) and common scientific symbols. Labels are rendered using Matplotlib&rsquo;s mathtext engine.
+            See the <a href="https://github.com/nicknsts/PlotIN/blob/main/docs/user_guide.md" target="_blank"
+            class="text-[var(--brand-green)] underline">label syntax guide</a> for examples.
+          </p>
+        </div>
+
+        <!-- OS support -->
+        <div class="rounded-2xl border border-slate-200 bg-white p-6">
           <h3 class="font-semibold">Which OS are supported?</h3>
-          <p class="mt-2 text-sm text-slate-700">Windows (EXE). The codebase is Python with Tkinter + Matplotlib.</p>
+          <p class="mt-2 text-sm text-slate-600">
+            Windows and macOS. The Student (Free) version targets modern Windows 10/11 and recent macOS versions.
+            PlotIN is delivered as a single portable executable on each platform.
+          </p>
         </div>
-        <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+
+        <!-- EMF export -->
+        <div class="rounded-2xl border border-slate-200 bg-white p-6">
           <h3 class="font-semibold">Can I export EMF?</h3>
-          <p class="mt-2 text-sm text-slate-700">Yes. EMF is produced via SVG conversion. Native SVG/PDF/PNG are included.</p>
+          <p class="mt-2 text-sm text-slate-600">
+            Yes. EMF is generated from the SVG using Inkscape&rsquo;s command-line tools. You need Inkscape installed and
+            available in your system <code>PATH</code>. If Inkscape is missing, EMF export is disabled, but SVG/PDF/PNG remain available.
+          </p>
         </div>
-        <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
-          <h3 class="font-semibold">Math/LaTeX‑style labels?</h3>
-          <p class="mt-2 text-sm text-slate-700">Supported: Greek letters, subscripts, exponents, scientific symbols.</p>
+
+        <!-- Installation & offline -->
+        <div class="rounded-2xl border border-slate-200 bg-white p-6">
+          <h3 class="font-semibold">Do I need to install anything?</h3>
+          <p class="mt-2 text-sm text-slate-600">
+            No traditional installer is required. Download the portable executable (.exe or .app), keep it wherever you like
+            (USB drive, project folder, desktop) and run it directly. PlotIN works fully offline; internet is only needed to
+            download new versions.
+          </p>
         </div>
-        <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
-          <h3 class="font-semibold">Demo vs Pro?</h3>
-          <p class="mt-2 text-sm text-slate-700">Demo is for quick evaluation; Pro unlocks all exports and regular updates.</p>
+
+        <!-- Licensing / free -->
+        <div class="rounded-2xl border border-slate-200 bg-white p-6">
+          <h3 class="font-semibold">Is PlotIN free?</h3>
+          <p class="mt-2 text-sm text-slate-600">
+            The current Student version is free for personal and academic use. A separate Pro edition with advanced features
+            (for example multi-format export in a single step or per-series style control) may be offered in the future.
+          </p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- Support / Donate -->
+  <section id="donate" class="py-16 border-t border-slate-200/60 bg-white">
+    <div class="mx-auto max-w-3xl px-4 text-center">
+      <h2 class="text-3xl font-bold tracking-tight text-slate-900">Support Plot<span class="brand-green">IN</span></h2>
+      <p class="mt-3 text-slate-600">
+        PlotIN (Student — Free) is community-driven. If it saves you time or helps with your reports, you can support development.
+      </p>
+
+      <div class="mt-6 flex flex-wrap items-center justify-center gap-3">
+        <!-- Fill in links when available -->
+        <a href="#"
+           class="inline-flex items-center gap-2 rounded-xl bg-[var(--brand-green)] text-white px-5 py-3 font-semibold shadow hover:opacity-90">
+          Donate via Revolut
+        </a>
+        <a href="#"
+           class="inline-flex items-center gap-2 rounded-xl border border-slate-300 bg-white px-5 py-3 font-semibold hover:bg-slate-50">
+          Donate via PayPal
+        </a>
+        <a href="#"
+           class="inline-flex items-center gap-2 rounded-xl border border-slate-300 bg-white px-5 py-3 font-semibold hover:bg-slate-50">
+          Buy Me a Coffee
+        </a>
+      </div>
+
+      <p class="mt-3 text-xs text-slate-500">
+        For collaborations or sponsorships, email <a class="underline" href="mailto:plotin.tool@gmail.com">plotin.tool@gmail.com</a>.
+      </p>
     </div>
   </section>
 
@@ -229,14 +299,20 @@
   <section id="contact" class="py-16">
     <div class="mx-auto max-w-6xl px-4 grid gap-8 md:grid-cols-1 text-center">
       <div>
-        <h2 class="text-3xl font-bold tracking-tight text-slate-900">Contact & support</h2>
-        <p class="mt-3 text-slate-600">Questions, bugs, feature ideas? Open an issue or send an email.</p>
+        <h2 class="text-3xl font-bold tracking-tight text-slate-900">Contact &amp; support</h2>
+        <p class="mt-3 text-slate-600">
+          Questions, bugs, feature ideas or feedback? Open a GitHub issue or send an email.
+        </p>
         <div class="mt-6 flex flex-wrap gap-3 justify-center">
-          <a href="https://github.com/nicknsts/PlotIN/issues" target="_blank" class="inline-flex items-center gap-2 rounded-xl border border-slate-300 bg-white px-5 py-3 font-semibold hover:bg-slate-50">GitHub Issues</a>
-          <a href="mailto:nastasnicu@gmail.com" class="inline-flex items-center gap-2 rounded-xl bg-slate-900 text-white px-5 py-3 font-semibold hover:bg-black">Email</a>
+          <a href="https://github.com/nicknsts/PlotIN/issues" target="_blank" class="inline-flex items-center gap-2 rounded-xl border border-slate-300 bg-white px-5 py-3 font-semibold hover:bg-slate-50">
+            GitHub Issues
+          </a>
+          <a href="mailto:plotin.tool@gmail.com" class="inline-flex items-center gap-2 rounded-xl bg-slate-900 text-white px-5 py-3 font-semibold hover:bg-black">
+            Email
+          </a>
         </div>
-        
-      </div></div>
+      </div>
+    </div>
   </section>
 
   <!-- Footer -->
@@ -249,5 +325,11 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+
+  <!-- Cloudflare Web Analytics -->
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon='{"token": "af6dd173a11f4227914089df9f497051"}'></script>
+  <!-- End Cloudflare Web Analytics -->
 </body>
 </html>
+
