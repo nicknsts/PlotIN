@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>PlotIN — (Student)</title>
+  <title>PlotIN</title>
   <meta name="description" content="PlotIN is a clean, engineer-friendly plotting tool: paste tabular data, drag & rename the legend, use math-style labels, and export plots as SVG/PDF/PNG/EMF. Portable, no install, works offline." />
   <!-- App icons (put the provided PNG at /assets/PlotIN.png) -->
   <link rel="icon" type="image/png" href="assets/PlotIN.png" />
@@ -20,6 +20,40 @@
     .brand-dark{ color:var(--brand-dark); }
     .brand-green{ color:var(--brand-green); }
     .bg-soft{ background:var(--bg-soft); }
+	    .feature-card {
+      /* stare inițială pentru animația de intrare */
+      opacity: 0;
+      transform: translateY(8px);
+      animation: featureFadeIn 400ms ease-out forwards;
+      /* efect la hover */
+      transition: transform 180ms ease-out, box-shadow 180ms ease-out, background-color 180ms ease-out;
+    }
+    .feature-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+      background-color: #f8fafc;
+    }
+
+    /* mici decalaje ca să intre „în cascadă” */
+    .feature-card:nth-child(1) { animation-delay: 0.00s; }
+    .feature-card:nth-child(2) { animation-delay: 0.06s; }
+    .feature-card:nth-child(3) { animation-delay: 0.12s; }
+
+    @keyframes featureFadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .feature-badge {
+      transition: transform 160ms ease-out;
+    }
+    .feature-badge:hover {
+      transform: translateY(-2px);
+    }
+
+	
   </style>
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased">
@@ -44,20 +78,18 @@
   <section class="relative">
     <div class="mx-auto max-w-6xl px-4 py-16 grid gap-10 md:grid-cols-2 md:items-center">
       <div>
-        <p class="inline-flex items-center rounded-full bg-soft text-[var(--brand-green)] px-3 py-1 text-xs font-semibold">Engineering-grade plotting GUI</p>
-        <h1 class="mt-4 text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-900">
-          Plot<span class="brand-green">IN</span> — publication-ready, <span class="underline decoration-[var(--brand-green)]/30 decoration-4 underline-offset-4">minimal &amp; clear</span>
-        </h1>
-        <p class="mt-5 text-lg text-slate-700 leading-relaxed">
-          Paste tabular data, get an instant plot, then drag the legend, rename series inline, use math-style labels (Greek, subscripts, exponents), and export as
-          <span class="font-semibold">SVG, PDF, PNG or EMF</span>.
-        </p>
+		<h1 class="mt-4 text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-900 text-center">
+		  Plot<span class="brand-green">IN</span> —
+		  <span class="text-[var(--brand-green)]">instant</span> plots,
+		  <span class="text-[var(--brand-green)]">minimal</span> effort,
+		  publication-ready <span class="text-[var(--brand-green)]">quality</span>
+		</h1>
 
-        <p class="mt-2 inline-flex items-center rounded-full bg-soft text-[var(--brand-green)] px-3 py-1 text-xs font-semibold">
-          Student — Free version (portable, no install)
-        </p>
-
-        <div class="mt-8 flex flex-wrap gap-3">
+		<p class="mt-4 text-base text-slate-600 text-center">
+		  Windows & macOS · Portable · Offline-ready plotting for engineering and scientific reports.
+		</p>
+		
+        <div class="mt-8 flex flex-wrap justify-center gap-3 w-full">
           <!-- CTA principal: duce direct la secțiunea Download -->
           <a id="download-cta" href="#download" class="inline-flex items-center gap-2 rounded-xl bg-[var(--brand-green)] text-white px-5 py-3 font-semibold shadow hover:opacity-90">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="-ml-1">
@@ -76,50 +108,101 @@
       </div>
 
       <!-- Hero mini-steps -->
-      <div class="relative">
-        <div class="aspect-[16/10] w-full overflow-hidden rounded-2xl ring-1 ring-slate-200 shadow-sm bg-white">
-          <div class="h-full w-full grid md:grid-cols-3 grid-cols-1">
-            <div class="p-6 border-b md:border-b-0 md:border-r border-slate-100 flex items-center gap-4">
-              <div class="rounded-xl bg-[var(--bg-soft)] p-3 ring-1 ring-slate-200">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="8" y="2" width="8" height="4" rx="1.5"></rect><rect x="5" y="6" width="14" height="16" rx="2"></rect></svg>
-              </div>
-              <div>
-                <div class="font-semibold">Paste data</div>
-                <div class="text-sm text-slate-600">Auto header + X–Y pairing</div>
-              </div>
-            </div>
-            <div class="p-6 border-b md:border-b-0 md:border-r border-slate-100 flex items-center gap-4">
-              <div class="rounded-xl bg-[var(--bg-soft)] p-3 ring-1 ring-slate-200">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 2v20M2 12h20"></path></svg>
-              </div>
-              <div>
-                <div class="font-semibold">Drag legend</div>
-                <div class="text-sm text-slate-600">Resize, move, show / hide</div>
-              </div>
-            </div>
-            <div class="p-6 flex items-center gap-4">
-              <div class="rounded-xl bg-[var(--bg-soft)] p-3 ring-1 ring-slate-200">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-              </div>
-              <div>
-                <div class="font-semibold">Export</div>
-                <div class="text-sm text-slate-600">SVG, PDF, PNG or EMF</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="absolute -bottom-4 right-4 rounded-xl bg-white shadow ring-1 ring-slate-200 px-4 py-2 text-sm font-medium">
-          Clean, publication-ready figures
-        </div>
-      </div>
+		<div class="relative">
+		  <div class="aspect-[16/10] w-full overflow-hidden rounded-2xl ring-1 ring-slate-200 shadow-sm bg-white">
+			<div class="h-full w-full grid grid-cols-1 md:grid-cols-3">
+			  <!-- 1. Paste → Plot instantly -->
+			  <div
+				class="group p-6 border-b md:border-b-0 md:border-r border-slate-100
+					   flex flex-col items-center text-center gap-4
+					   transition duration-200 ease-out hover:bg-[var(--bg-soft)]/60 hover:-translate-y-1 hover:shadow-sm"
+			  >
+				<div
+				  class="rounded-xl bg-[var(--bg-soft)] p-3 ring-1 ring-slate-200 flex items-center justify-center
+						 transition-transform duration-200 group-hover:-translate-y-1 group-hover:ring-[var(--brand-green)] group-hover:bg-white"
+				>
+				  <!-- Clipboard icon -->
+				  <svg width="26" height="26" viewBox="0 0 24 24" fill="none"
+					   xmlns="http://www.w3.org/2000/svg" class="text-slate-700">
+					<rect x="7" y="5" width="10" height="14" rx="2" stroke="currentColor" stroke-width="1.7"/>
+					<rect x="9" y="3" width="6" height="4" rx="1.5" stroke="currentColor" stroke-width="1.7"/>
+				  </svg>
+				</div>
+				<div class="max-w-xs mx-auto">
+				  <div class="font-semibold">Paste → Plot instantly</div>
+				  <div class="mt-1 text-sm text-slate-600">
+					Paste tabular data — PlotIN detects headers and pairs X–Y automatically.
+				  </div>
+				</div>
+			  </div>
+
+			  <!-- 2. Adjust → Minimal effort -->
+			  <div
+				class="group p-6 border-b md:border-b-0 md:border-r border-slate-100
+					   flex flex-col items-center text-center gap-4
+					   transition duration-200 ease-out hover:bg-[var(--bg-soft)]/60 hover:-translate-y-1 hover:shadow-sm"
+			  >
+				<div
+				  class="rounded-xl bg-[var(--bg-soft)] p-3 ring-1 ring-slate-200 flex items-center justify-center
+						 transition-transform duration-200 group-hover:-translate-y-1 group-hover:ring-[var(--brand-green)] group-hover:bg-white"
+				>
+				  <!-- Adjust / control icon -->
+				  <svg width="26" height="26" viewBox="0 0 24 24" fill="none"
+					   xmlns="http://www.w3.org/2000/svg" class="text-slate-700">
+					<circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.7"/>
+					<path d="M12 5V3M12 21v-2M5 12H3M21 12h-2"
+						  stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+				  </svg>
+				</div>
+				<div class="max-w-xs mx-auto">
+				  <div class="font-semibold">Adjust → Minimal effort</div>
+					<div class="mt-1 text-sm text-slate-600">
+					  Drag the legend, rename series inline, and fine-tune axes (colors, grid, fonts, ranges) in seconds — no complex menus.
+					</div>
+				</div>
+			  </div>
+
+			  <!-- 3. Export → Publication-ready -->
+			  <div
+				class="group p-6 flex flex-col items-center text-center gap-4
+					   transition duration-200 ease-out hover:bg-[var(--bg-soft)]/60 hover:-translate-y-1 hover:shadow-sm"
+			  >
+				<div
+				  class="rounded-xl bg-[var(--bg-soft)] p-3 ring-1 ring-slate-200 flex items-center justify-center
+						 transition-transform duration-200 group-hover:-translate-y-1 group-hover:ring-[var(--brand-green)] group-hover:bg-white"
+				>
+				  <!-- Export icon -->
+				  <svg width="26" height="26" viewBox="0 0 24 24" fill="none"
+					   xmlns="http://www.w3.org/2000/svg" class="text-slate-700">
+					<path d="M12 3v10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+					<path d="M8.5 10.5L12 14l3.5-3.5"
+						  stroke="currentColor" stroke-width="1.7"
+						  stroke-linecap="round" stroke-linejoin="round"/>
+					<rect x="5" y="17" width="14" height="3" rx="1.5"
+						  stroke="currentColor" stroke-width="1.7"/>
+				  </svg>
+				</div>
+				<div class="max-w-xs mx-auto">
+				  <div class="font-semibold">Export → Publication-ready</div>
+					<div class="mt-1 text-sm text-slate-600">
+					  Save high-quality vector figures (SVG, PDF, EMF, EPS) for papers and presentations.
+					</div>
+
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+
     </div>
   </section>
 
   <!-- Features -->
   <section id="features" class="py-16 bg-white border-t border-b border-slate-200/60">
     <div class="mx-auto max-w-6xl px-4">
-      <h2 class="text-3xl font-bold tracking-tight text-slate-900">Key features (Student)</h2>
-      <p class="mt-3 text-slate-600 max-w-3xl">
+      <h2 class="text-3xl font-bold tracking-tight text-slate-900 text-center mx-auto">Key features</h2>
+      <p class="mt-3 text-slate-600 max-w-3xl text-center mx-auto">
         Generate plots instantly by paste, then adjust only what you need: legend, axes, fonts and export format.
       </p>
       <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -141,7 +224,7 @@
         <div class="rounded-2xl border border-slate-200 p-6 bg-slate-50">
           <h3 class="font-semibold">Math-style labels</h3>
           <p class="mt-2 text-sm text-slate-600">
-            Greek letters, subscripts, exponents and scientific units (Ω, °C, μ) using Matplotlib mathtext.
+            Greek letters, subscripts, superscripts and full mathtext — from simple units (Ω, °C, μ) to advanced expressions such as Vₒᵤₜ(t) = 5·e⁻ʲωt, Z(ω) = R + jωL, or H(s) = ω₀² / (s² + 2ζω₀s + ω₀²).
           </p>
         </div>
         <!-- Axes & fonts -->
@@ -162,7 +245,7 @@
         <div class="rounded-2xl border border-slate-200 p-6 bg-slate-50">
           <h3 class="font-semibold">Export &amp; portability</h3>
           <p class="mt-2 text-sm text-slate-600">
-            Export plots as SVG, PDF, PNG or EMF (via SVG conversion). One format per export in the Student version.
+            Export plots as SVG, PDF, PNG, EMF (via SVG conversion) & others.
             PlotIN is shipped as a portable executable on Windows and macOS: no installation required, works fully offline.
           </p>
         </div>
@@ -174,8 +257,7 @@
   <section id="screens" class="py-16">
     <div class="mx-auto max-w-6xl px-4">
       <div class="flex items-end justify-between gap-4">
-        <h2 class="text-3xl font-bold tracking-tight text-slate-900">How it looks</h2>
-        <a href="https://github.com/nicknsts/PlotIN/releases" target="_blank" rel="noopener" class="text-[var(--brand-green)] font-semibold hover:underline">Releases →</a>
+        <h2 class="text-3xl font-bold tracking-tight text-slate-900 text-center mx-auto">How it looks</h2>
       </div>
       <div class="mt-8 rounded-2xl overflow-hidden bg-white ring-1 ring-slate-200 shadow-sm h-72 md:h-80">
         <video class="w-full h-full object-contain" autoplay loop muted playsinline preload="metadata" poster="assets/screen-legend.png">
@@ -184,8 +266,8 @@
           <img src="assets/screen-legend.png" alt="PlotIN preview" class="w-full h-full object-contain">
         </video>
       </div>
-      <p class="mt-3 text-sm text-slate-600">
-        Paste data → drag legend → inline rename → adjust axes → export as SVG, PDF, PNG or EMF.
+      <p class="mt-3 text-sm text-slate-600 text-center mx-auto">
+        Paste data → drag legend → inline rename → adjust lines & axes → export as SVG, PDF, PNG, EMF...
       </p>
     </div>
   </section>
@@ -194,9 +276,13 @@
   <section id="download" class="py-16">
     <div class="mx-auto max-w-6xl px-4 text-center">
       <h2 class="text-3xl font-bold tracking-tight text-slate-900">Download Plot<span class="brand-green">IN</span></h2>
-      <p class="mt-3 text-slate-600">
-        Official Student builds (portable executables) are published on GitHub Releases.
-      </p>
+		<p class="mt-3 text-slate-600">
+		  Official builds (<span class="font-semibold text-slate-900">Windows</span>
+		  &amp;
+		  <span class="font-semibold text-slate-900">macOS</span>,
+		  portable executables) are published on GitHub Releases.
+		</p>
+
       <div class="mt-6 flex flex-wrap items-center justify-center gap-3">
         <a href="https://github.com/nicknsts/PlotIN/releases" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-xl bg-[var(--brand-green)] text-white px-5 py-3 font-semibold shadow hover:opacity-90">
           Releases
@@ -214,14 +300,14 @@
   <!-- FAQ -->
   <section id="faq" class="py-16">
     <div class="mx-auto max-w-6xl px-4">
-      <h2 class="text-3xl font-bold tracking-tight text-slate-900">FAQ</h2>
+      <h2 class="text-3xl font-bold tracking-tight text-slate-900 text-center mx-auto">FAQ</h2>
 
       <div class="mt-8 grid gap-4 md:grid-cols-2">
         <!-- Math / LaTeX-style labels -->
         <div class="rounded-2xl border border-slate-200 bg-white p-6">
           <h3 class="font-semibold">Math / LaTeX-style labels?</h3>
           <p class="mt-2 text-sm text-slate-600">
-            Yes. PlotIN supports Greek letters (<code>\\alpha</code>, <code>\\Omega</code>), subscripts (<code>V_{out}</code>), exponents
+            Yes. PlotIN supports Greek letters (<code>\alpha</code>, <code>\Omega</code>), subscripts (<code>V_{out}</code>), exponents
             (<code>x^2</code>) and common scientific symbols. Labels are rendered using Matplotlib&rsquo;s mathtext engine.
             See the <a href="https://github.com/nicknsts/PlotIN/blob/main/docs/user_guide.md" target="_blank" rel="noopener"
             class="text-[var(--brand-green)] underline">label syntax guide</a> for examples.
@@ -232,8 +318,7 @@
         <div class="rounded-2xl border border-slate-200 bg-white p-6">
           <h3 class="font-semibold">Which OS are supported?</h3>
           <p class="mt-2 text-sm text-slate-600">
-            Windows and macOS. The Student (Free) version targets modern Windows 10/11 and recent macOS versions.
-            PlotIN is delivered as a single portable executable on each platform.
+			PlotIN is available as a portable .exe on Windows and as a drag-and-drop .app bundle on macOS. Both require no installation.
           </p>
         </div>
 
@@ -250,9 +335,9 @@
         <div class="rounded-2xl border border-slate-200 bg-white p-6">
           <h3 class="font-semibold">Do I need to install anything?</h3>
           <p class="mt-2 text-sm text-slate-600">
-            No traditional installer is required. Download the portable executable (.exe or .app), keep it wherever you like
-            (USB drive, project folder, desktop) and run it directly. PlotIN works fully offline; internet is only needed to
-            download new versions.
+			No installer is required. On Windows, run the .exe directly.
+			On macOS, drag the .app anywhere you like (Desktop, Applications, USB drive) and launch it.
+			PlotIN works fully offline; internet is only needed to download updates.
           </p>
         </div>
 
