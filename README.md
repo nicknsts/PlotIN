@@ -1,98 +1,68 @@
 # PlotIN  
-A minimalist, fast and academically-oriented plotting tool.
+A fast, minimalist, and portable tool for scientific plotting.
 
-PlotIN transforms pasted tabular data into clean, publication-ready scientific plots within seconds.  
-Designed for researchers, engineers and students who want **beautiful plots without friction**.
-
-> 📘 **Full Documentation:**  
-> https://github.com/nicknsts/PlotIN/blob/main/docs/user_guide.md
+PlotIN transforms pasted tabular data into clean, publication-ready plots with almost zero effort.  
+Designed for engineers, researchers, and students who want **instant high-quality figures** without setup, installation or scripting.
 
 ---
 
-## ✨ Features
+## 🚀 Key Features
 
-### 🚀 Fast workflow
-- No file import dialogs  
-- Data comes directly from **copy → paste**  
-- Auto-preview updates ~200 ms after each edit  
+### ⚡ Instant workflow
+**Copy → Paste → Preview → Adjust → Export**  
+No import dialogs. No installation. No configuration.
 
-### 📊 Smart data detection
-- Detects X/Y columns intelligently  
-- Supports headers, no-header mode, and pair-matching patterns  
-- Smooth interpretation of Excel / CSV / tabular formats  
+### 🔍 Smart data detection
+- Detects X/Y columns automatically  
+- Supports headers, no-header mode, and alternating X/Y pair structures  
+- Works with data pasted from Excel, MATLAB, ANSYS, Flux, COMSOL, LTspice, LabVIEW, and many others
 
-### 🎛️ Full plot customization
-- Global styling (colors, line style, markers, grids…)  
-- Per-series overrides (color, width, label, marker…)  
-- Crosshair axes mode  
-- Adjustable ticks, scales, limits  
-- Spline-like smoothing option  
+### 🎛️ Full control over appearance
+- Global styling: line types, markers, colors, grids  
+- Smooth (spline-like) curves  
+- Axis scaling (linear/log/symlog)  
+- Manual axis limits  
+- LaTeX-style labels and legend entries  
 
-### 🧭 Advanced graph navigation
+### 🖱️ Interactive navigation
 - Zoom to rectangle  
-- Pan  
-- Directional zoom (horizontal / vertical)  
-- Undo / redo navigation  
-- “Home” (view reset) — short & long press modes  
+- Pan + directional zoom (horizontal/vertical)  
+- Draggable and resizable legend  
+- Short-press / long-press Home reset  
 
-### 🏷️ Interactive legend
-- Drag to reposition  
-- Ctrl+drag to resize  
-- Inline label renaming  
-- Auto-clamped inside plot area  
+### 📤 Export formats
+- **PNG**
+- **SVG**
+- **PDF**
+- **EMF** (via Inkscape)
+- **Others**
 
-### 🔤 LaTeX / MathText support
-- Greek letters, indices, exponents  
-- Scientific units  
-- Formula expressions  
+Exports match the on-screen preview exactly.
 
-### 📤 Multi-format export
-Exports **four formats at once**:
-- PNG  
-- SVG  
-- PDF  
-- EMF *(requires Inkscape on Windows/macOS)*  
-
-### 🖥️ Cross-platform
-- Windows  
-- macOS (trackpad & Magic Mouse fully supported)  
+### 🌐 Works offline — improved when online
+- Full plotting capability with no internet  
+- When online, PlotIN can check for updates and display optional informational messages  
 
 ---
 
 ## 📘 Documentation
-All instructions, examples and tips are available in the full user guide:
-
+Full user guide with examples (LaTeX, navigation, styling, exporting):  
 👉 **https://github.com/nicknsts/PlotIN/blob/main/docs/user_guide.md**
 
-The documentation covers:
-- Data formats and detection logic  
-- Navigation (zoom, pan, directional zoom, home reset)  
-- Styling (global & per-series)  
-- Axes, ticks, scales  
-- Legend editing  
-- Export details (PNG/SVG/PDF/EMF)  
-- LaTeX features  
-- macOS interaction notes  
-- Recommended workflow  
-
 ---
 
-## 📥 Installation
-PlotIN is distributed as a standalone executable for Windows and macOS.
-
-Download the latest release here:  
+## 💾 Download
+Get the latest release for Windows or macOS:  
 👉 **https://github.com/nicknsts/PlotIN/releases**
 
-No Python installation required.
+Runs as a single executable/app — no installers, drivers or dependencies required.
 
 ---
 
-## 🧩 Requirements
-For EMF export, **Inkscape is mandatory**:
-- Windows: Inkscape must be installed and added to PATH  
-- macOS: Inkscape must exist at  
-  `/Applications/Inkscape.app/Contents/MacOS/inkscape`  
+## 💚 Support & Feedback
+If you enjoy PlotIN and want to support development, click **Donate** inside the app.  
+Issues and feature requests can be opened here:  
+👉 **https://github.com/nicknsts/PlotIN/issues**
 
-Download: https://inkscape.org/release/
-
-
+---
+Copyright © 2025 Ion Nastas
