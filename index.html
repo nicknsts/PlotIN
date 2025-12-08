@@ -110,17 +110,14 @@
       <!-- Hero mini-steps -->
 		<div class="relative">
 		  <div class="aspect-[16/10] w-full overflow-hidden rounded-2xl ring-1 ring-slate-200 shadow-sm bg-white">
-			<div class="w-full grid grid-cols-1 md:grid-cols-3 gap-6">
+			<div class="w-full flex flex-col gap-6 md:grid md:grid-cols-3">
 			  <!-- 1. Paste → Plot instantly -->
 			  <div
 				class="group p-6 border-b md:border-b-0 md:border-r border-slate-100
 					   flex flex-col items-center text-center gap-4
-					   transition duration-200 ease-out hover:bg-[var(--bg-soft)]/60 hover:-translate-y-1 hover:shadow-sm"
-			  >
-				<div
-				  class="rounded-xl bg-[var(--bg-soft)] p-3 ring-1 ring-slate-200 flex items-center justify-center
-						 transition-transform duration-200 group-hover:-translate-y-1 group-hover:ring-[var(--brand-green)] group-hover:bg-white"
-				>
+					   transition duration-200 ease-out hover:bg-[var(--bg-soft)]/60 hover:-translate-y-1 hover:shadow-sm">
+				<div class="rounded-xl bg-[var(--bg-soft)] p-3 ring-1 ring-slate-200 flex items-center justify-center
+						 transition-transform duration-200 group-hover:-translate-y-1 group-hover:ring-[var(--brand-green)] group-hover:bg-white">
 				  <!-- Clipboard icon -->
 				  <svg width="26" height="26" viewBox="0 0 24 24" fill="none"
 					   xmlns="http://www.w3.org/2000/svg" class="text-slate-700">
@@ -137,15 +134,11 @@
 			  </div>
 
 			  <!-- 2. Adjust → Minimal effort -->
-			  <div
-				class="group p-6 border-b md:border-b-0 md:border-r border-slate-100
+			  <div class="group p-6 border-b md:border-b-0 md:border-r border-slate-100
 					   flex flex-col items-center text-center gap-4
-					   transition duration-200 ease-out hover:bg-[var(--bg-soft)]/60 hover:-translate-y-1 hover:shadow-sm"
-			  >
-				<div
-				  class="rounded-xl bg-[var(--bg-soft)] p-3 ring-1 ring-slate-200 flex items-center justify-center
-						 transition-transform duration-200 group-hover:-translate-y-1 group-hover:ring-[var(--brand-green)] group-hover:bg-white"
-				>
+					   transition duration-200 ease-out hover:bg-[var(--bg-soft)]/60 hover:-translate-y-1 hover:shadow-sm">
+				<div class="rounded-xl bg-[var(--bg-soft)] p-3 ring-1 ring-slate-200 flex items-center justify-center
+						 transition-transform duration-200 group-hover:-translate-y-1 group-hover:ring-[var(--brand-green)] group-hover:bg-white">
 				  <!-- Adjust / control icon -->
 				  <svg width="26" height="26" viewBox="0 0 24 24" fill="none"
 					   xmlns="http://www.w3.org/2000/svg" class="text-slate-700">
@@ -163,14 +156,10 @@
 			  </div>
 
 			  <!-- 3. Export → Publication-ready -->
-			  <div
-				class="group p-6 flex flex-col items-center text-center gap-4
-					   transition duration-200 ease-out hover:bg-[var(--bg-soft)]/60 hover:-translate-y-1 hover:shadow-sm"
-			  >
-				<div
-				  class="rounded-xl bg-[var(--bg-soft)] p-3 ring-1 ring-slate-200 flex items-center justify-center
-						 transition-transform duration-200 group-hover:-translate-y-1 group-hover:ring-[var(--brand-green)] group-hover:bg-white"
-				>
+			  <div class="group p-6 flex flex-col items-center text-center gap-4
+					   transition duration-200 ease-out hover:bg-[var(--bg-soft)]/60 hover:-translate-y-1 hover:shadow-sm">
+				<div class="rounded-xl bg-[var(--bg-soft)] p-3 ring-1 ring-slate-200 flex items-center justify-center
+						 transition-transform duration-200 group-hover:-translate-y-1 group-hover:ring-[var(--brand-green)] group-hover:bg-white">
 				  <!-- Export icon -->
 				  <svg width="26" height="26" viewBox="0 0 24 24" fill="none"
 					   xmlns="http://www.w3.org/2000/svg" class="text-slate-700">
@@ -380,17 +369,29 @@
       <div class="mt-6 flex flex-wrap items-center justify-center gap-3">
         <!-- Linkurile reale de donații: actualizează-le când ai URL-urile tale -->
         <a href="https://revolut.me/nicknsts" target="_blank" rel="noopener"
-           class="inline-flex items-center gap-2 rounded-xl border border-slate-300 bg-white px-5 py-3 font-semibold hover:bg-slate-50">
+           class="inline-flex items-center justify-center rounded-xl 
+       border border-[var(--brand-green)] px-7 py-3.5 text-sm font-medium 
+       text-slate-800 
+       hover:bg-[var(--brand-green)] hover:text-white 
+       transition-colors duration-150">
           Donate via Revolut
         </a>
 
         <a href="https://paypal.me/nicknsts" target="_blank" rel="noopener"
-           class="inline-flex items-center gap-2 rounded-xl border border-slate-300 bg-white px-5 py-3 font-semibold hover:bg-slate-50">
+           class="inline-flex items-center justify-center rounded-xl 
+       border border-[var(--brand-green)] px-7 py-3.5 text-sm font-medium 
+       text-slate-800 
+       hover:bg-[var(--brand-green)] hover:text-white 
+       transition-colors duration-150">
           Donate via PayPal
         </a>
 
         <a href="https://buymeacoffee.com/plotin" target="_blank" rel="noopener"
-           class="inline-flex items-center gap-2 rounded-xl border border-slate-300 bg-white px-5 py-3 font-semibold hover:bg-slate-50">
+           class="inline-flex items-center justify-center rounded-xl 
+       border border-[var(--brand-green)] px-7 py-3.5 text-sm font-medium 
+       text-slate-800 
+       hover:bg-[var(--brand-green)] hover:text-white 
+       transition-colors duration-150">
           Buy Me a Coffee
         </a>
       </div>
