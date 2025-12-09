@@ -1,0 +1,109 @@
+name: "🐞 BUG report"
+description: "Report an unexpected behavior or regression in PlotIN"
+title: "[BUG] Short summary"
+labels: ["BUG"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking the time to report a BUG in PlotIN 🙌  
+        Please fill in the sections below as clearly as possible.
+
+  - type: input
+    id: short_summary
+    attributes:
+      label: Short summary
+      description: "One sentence describing the problem."
+      placeholder: "Y-axis does not restore negative values after switching back to linear scale"
+    validations:
+      required: true
+
+  - type: textarea
+    id: preconditions
+    attributes:
+      label: Preconditions
+      description: "System state and context before the issue appears."
+      placeholder: |
+        Example:
+        - PlotIN started with default settings.
+    validations:
+      required: true
+
+  - type: textarea
+    id: events
+    attributes:
+      label: Events / Steps to reproduce
+      description: "List the exact steps so we can reproduce the issue."
+      placeholder: |
+        1. Start PlotIN
+        2. Paste data
+        3. Select 'Line' plot type
+        4. Change Y-scale from 'linear' to 'log'
+        5. Change Y-scale back to 'linear'
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: "What did you expect PlotIN to do?"
+      placeholder: "Y-axis should show the full range from -10 to +10, same as before switching to log scale."
+    validations:
+      required: true
+
+  - type: textarea
+    id: deviations
+    attributes:
+      label: Actual behavior / deviations
+      description: "What actually happens instead of the expected behavior?"
+      placeholder: "After switching back to linear scale, the Y-axis only shows positive values (0 to 10)."
+    validations:
+      required: true
+
+  - type: textarea
+    id: traces
+    attributes:
+      label: Traces / logs / console output
+      description: "If available, paste any relevant console output, stack trace, or error message."
+      placeholder: "Paste logs here, or write 'No logs' if nothing is shown."
+    validations:
+      required: false
+
+  - type: input
+    id: version
+    attributes:
+      label: PlotIN version
+      description: "Which PlotIN version are you using?"
+      placeholder: "e.g. PlotIN 1.0 (Windows) or PlotIN 1.0 (macOS)"
+    validations:
+      required: true
+
+  - type: input
+    id: os
+    attributes:
+      label: Operating system
+      description: "OS name and version."
+      placeholder: "e.g. Windows 11 x64, macOS Sequoia 15.x"
+    validations:
+      required: true
+
+  - type: input
+    id: plot_context
+    attributes:
+      label: Plot context
+      description: "What kind of plot and data source were you using?"
+      placeholder: "e.g. Line plot, tabular (CSV) data, 2 columns (X, Y)"
+    validations:
+      required: false
+
+  - type: textarea
+    id: attachments
+    attributes:
+      label: Attachments (data / screenshots)
+      description: "If possible, attach a minimal data file and/or screenshots that show the issue."
+      placeholder: "Describe attached files or how they can be reproduced with synthetic data."
+    validations:
+      required: false

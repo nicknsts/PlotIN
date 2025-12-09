@@ -1,0 +1,77 @@
+name: "✨ Enhancement request"
+description: "Suggest a new feature or an improvement for PlotIN"
+title: "[Enhancement] Short summary"
+labels: ["Enhancement"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Have an idea that could make PlotIN better?  
+        Please describe it here as clearly as possible.
+
+  - type: input
+    id: summary
+    attributes:
+      label: Short summary
+      description: "One sentence describing the enhancement."
+      placeholder: "Add EMF export without requiring Inkscape"
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem / motivation
+      description: "What problem does this enhancement solve for you?"
+      placeholder: |
+        For example:
+        I frequently need to insert high-quality vector plots into Word documents.
+        Currently I have to use Inkscape as an intermediate step to get EMF, which adds
+        extra time and complexity to my workflow.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: "Describe how you imagine this feature working in PlotIN."
+      placeholder: |
+        For example:
+        - Add an 'EMF' checkbox next to the existing SVG/PDF/PNG export options.
+        - Use a built-in backend or library to generate EMF directly from Matplotlib,
+          without relying on Inkscape.
+    validations:
+      required: false
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: "Have you tried any workarounds or alternative tools?"
+      placeholder: "e.g. I tried exporting as SVG and then converting manually, but..."
+    validations:
+      required: false
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Perceived priority
+      description: "How important is this enhancement for your workflow?"
+      options:
+        - Nice to have
+        - Important
+        - Critical for my work
+    validations:
+      required: false
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Additional context
+      description: "Any other details, mockups, or links that might be useful."
+      placeholder: "e.g. Links to similar features in other tools, UI sketches, etc."
+    validations:
+      required: false
