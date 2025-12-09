@@ -1,7 +1,7 @@
 name: "✨ Enhancement request"
 description: "Suggest a new feature or improvement for PlotIN"
 title: "[Enhancement] Short summary"
-labels: ["Enhancement"]
+labels: ["enhancement"]
 assignees: []
 
 body:

@@ -1,7 +1,7 @@
 name: "💬 Support request"
 description: "Ask a question about using PlotIN"
 title: "[Support] Short summary"
-labels: ["Support"]
+labels: ["support"]
 assignees: []
 
 body:

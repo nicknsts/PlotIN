@@ -1,7 +1,7 @@
 name: "🐞 BUG report"
 description: "Report an unexpected behavior in PlotIN"
 title: "[BUG] Short summary"
-labels: ["BUG"]
+labels: ["bug"]
 assignees: []
 
 body:
