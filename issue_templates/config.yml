@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: PlotIN Website
+    url: https://nicknsts.github.io/PlotIN/
+    about: "Documentation, news, and useful links for PlotIN."
+  - name: PlotIN User Guide
+    url: https://github.com/nicknsts/PlotIN/blob/main/docs/user_guide.md
+    about: "Full user guide for PlotIN."
