@@ -1,5 +1,5 @@
 name: "✨ Enhancement request"
-description: "Suggest a new feature or an improvement for PlotIN"
+description: "Suggest a new feature or improvement for PlotIN"
 title: "[Enhancement] Short summary"
 labels: ["Enhancement"]
 assignees: []
@@ -9,69 +9,38 @@ body:
     attributes:
       value: |
         Have an idea that could make PlotIN better?  
-        Please describe it here as clearly as possible.
+        Keep it short and focused on your real use case.
 
   - type: input
     id: summary
     attributes:
       label: Short summary
-      description: "One sentence describing the enhancement."
-      placeholder: "Add EMF export without requiring Inkscape"
+      placeholder: "Add EMF export without using Inkscape"
     validations:
       required: true
 
   - type: textarea
-    id: problem
+    id: motivation
     attributes:
-      label: Problem / motivation
-      description: "What problem does this enhancement solve for you?"
+      label: Why is this useful?
+      description: "How would this help you in your real workflow?"
       placeholder: |
-        For example:
-        I frequently need to insert high-quality vector plots into Word documents.
-        Currently I have to use Inkscape as an intermediate step to get EMF, which adds
-        extra time and complexity to my workflow.
+        Example:
+        I regularly need high-quality scientific plots for reports and papers.
+        Having this feature directly inside PlotIN saves time and avoids external tools.
     validations:
       required: true
 
   - type: textarea
-    id: proposal
+    id: idea
     attributes:
-      label: Proposed solution
-      description: "Describe how you imagine this feature working in PlotIN."
+      label: Suggested approach (optional)
+      description: "If you already have a specific idea for how this could work, describe it here."
       placeholder: |
-        For example:
-        - Add an 'EMF' checkbox next to the existing SVG/PDF/PNG export options.
-        - Use a built-in backend or library to generate EMF directly from Matplotlib,
-          without relying on Inkscape.
+        Example:
+        Add an option in the Save Figure dialog to enable/disable EMF export.
+        If Inkscape is installed, PlotIN can automatically convert the SVG to EMF behind the scenes.
+        If not installed, the EMF option simply remains unavailable.
     validations:
       required: false
 
-  - type: textarea
-    id: alternatives
-    attributes:
-      label: Alternatives considered
-      description: "Have you tried any workarounds or alternative tools?"
-      placeholder: "e.g. I tried exporting as SVG and then converting manually, but..."
-    validations:
-      required: false
-
-  - type: dropdown
-    id: priority
-    attributes:
-      label: Perceived priority
-      description: "How important is this enhancement for your workflow?"
-      options:
-        - Nice to have
-        - Important
-        - Critical for my work
-    validations:
-      required: false
-
-  - type: textarea
-    id: extra
-    attributes:
-      label: Additional context
-      description: "Any other details, mockups, or links that might be useful."
-      placeholder: "e.g. Links to similar features in other tools, UI sketches, etc."
-    validations:
-      required: false

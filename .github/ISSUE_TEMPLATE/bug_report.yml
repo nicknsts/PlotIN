@@ -1,5 +1,5 @@
 name: "🐞 BUG report"
-description: "Report an unexpected behavior or regression in PlotIN"
+description: "Report an unexpected behavior in PlotIN"
 title: "[BUG] Short summary"
 labels: ["BUG"]
 assignees: []
@@ -8,67 +8,54 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thank you for taking the time to report a BUG in PlotIN 🙌  
-        Please fill in the sections below as clearly as possible.
+        Thanks for helping improve PlotIN!  
+        Please keep the report as short and clear as possible.
 
   - type: input
-    id: short_summary
+    id: summary
     attributes:
       label: Short summary
-      description: "One sentence describing the problem."
-      placeholder: "Y-axis does not restore negative values after switching back to linear scale"
+      placeholder: "Y-axis loses negative values after switching back to linear scale"
     validations:
       required: true
 
   - type: textarea
-    id: preconditions
+    id: steps
     attributes:
-      label: Preconditions
-      description: "System state and context before the issue appears."
+      label: Steps to reproduce
+      description: "What do you click / change, step by step?"
       placeholder: |
-        Example:
-        - PlotIN started with default settings.
+        1. Open PlotIN
+        2. Paste data into the main text area
+        3. Select Line plot
+        4. Change Y-scale to log
+        5. Change Y-scale back to linear
     validations:
       required: true
 
   - type: textarea
-    id: events
+    id: behavior
     attributes:
-      label: Events / Steps to reproduce
-      description: "List the exact steps so we can reproduce the issue."
+      label: Expected vs. actual behavior
+      description: "What did you expect to happen, and what happens instead?"
       placeholder: |
-        1. Start PlotIN
-        2. Paste data
-        3. Select 'Line' plot type
-        4. Change Y-scale from 'linear' to 'log'
-        5. Change Y-scale back to 'linear'
+        Expected: Y-axis shows full range from -10 to +10.
+        Actual: Only positive values (0 to 10) are visible.
     validations:
       required: true
 
   - type: textarea
-    id: expected
+    id: data_sample
     attributes:
-      label: Expected behavior
-      description: "What did you expect PlotIN to do?"
-      placeholder: "Y-axis should show the full range from -10 to +10, same as before switching to log scale."
-    validations:
-      required: true
-
-  - type: textarea
-    id: deviations
-    attributes:
-      label: Actual behavior / deviations
-      description: "What actually happens instead of the expected behavior?"
-      placeholder: "After switching back to linear scale, the Y-axis only shows positive values (0 to 10)."
-    validations:
-      required: true
-
-  - type: textarea
-    id: traces
-    attributes:
-      label: Traces / logs / console output
-      description: "If available, paste any relevant console output, stack trace, or error message."
-      placeholder: "Paste logs here, or write 'No logs' if nothing is shown."
+      label: Data sample (pasted)
+      description: "Paste a small example of the data you used in PlotIN. PlotIN currently works only with pasted data."
+      placeholder: |
+        X,Y
+        -10,-5
+        -5,-2
+        0,0
+        5,2
+        10,5
     validations:
       required: false
 
@@ -76,8 +63,7 @@ body:
     id: version
     attributes:
       label: PlotIN version
-      description: "Which PlotIN version are you using?"
-      placeholder: "e.g. PlotIN 1.0 (Windows) or PlotIN 1.0 (macOS)"
+      placeholder: "e.g. PlotIN 1.0 (Windows)"
     validations:
       required: true
 
@@ -85,25 +71,6 @@ body:
     id: os
     attributes:
       label: Operating system
-      description: "OS name and version."
-      placeholder: "e.g. Windows 11 x64, macOS Sequoia 15.x"
+      placeholder: "e.g. Windows 11 x64, macOS Sequoia"
     validations:
       required: true
-
-  - type: input
-    id: plot_context
-    attributes:
-      label: Plot context
-      description: "What kind of plot and data source were you using?"
-      placeholder: "e.g. Line plot, tabular (CSV) data, 2 columns (X, Y)"
-    validations:
-      required: false
-
-  - type: textarea
-    id: attachments
-    attributes:
-      label: Attachments (data / screenshots)
-      description: "If possible, attach a minimal data file and/or screenshots that show the issue."
-      placeholder: "Describe attached files or how they can be reproduced with synthetic data."
-    validations:
-      required: false

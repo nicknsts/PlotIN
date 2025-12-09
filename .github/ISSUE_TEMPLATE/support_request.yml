@@ -1,5 +1,5 @@
 name: "💬 Support request"
-description: "Ask a question about using PlotIN or clarify a behavior"
+description: "Ask a question about using PlotIN"
 title: "[Support] Short summary"
 labels: ["Support"]
 assignees: []
@@ -8,43 +8,40 @@ body:
   - type: markdown
     attributes:
       value: |
-        Not sure if something is a BUG, or you just need help understanding a feature?  
-        Use this template for questions and usage support.
+        Use this template if you need help using PlotIN or if something is unclear.
 
   - type: input
     id: summary
     attributes:
       label: Question summary
-      description: "One sentence describing your question."
-      placeholder: "How do I center the axes at the origin in PlotIN?"
+      placeholder: "How can I center both axes at the origin?"
     validations:
       required: true
 
   - type: textarea
     id: question
     attributes:
-      label: Full question / description
-      description: "Explain what you are trying to do and what is unclear."
+      label: Full question
+      description: "Explain what you are trying to do."
       placeholder: |
-        I am trying to set both X and Y axes to cross at (0, 0) in the center of the plot.
-        I expected to find an option similar to 'Axis crossing' in other plotting tools, but I can't
-        locate it in the PlotIN interface.
+        I want both X and Y axes to cross at (0, 0) in the middle of the plot.
+        I tried changing the axis limits, but I am not sure which option controls this.
     validations:
       required: true
 
   - type: textarea
     id: context
     attributes:
-      label: Context
+      label: Context (optional)
       description: "What were you doing in PlotIN when this question appeared?"
-      placeholder: "e.g. I pasted data from Excel, selected a line plot, and opened the Axes & Ticks dialog..."
+      placeholder: "e.g. I pasted data, selected a bar plot, opened the Axes & Ticks dialog..."
     validations:
       required: false
 
   - type: input
     id: version
     attributes:
-      label: PlotIN version
+      label: PlotIN version (optional)
       placeholder: "e.g. PlotIN 1.0 (Windows)"
     validations:
       required: false
@@ -52,25 +49,7 @@ body:
   - type: input
     id: os
     attributes:
-      label: Operating system
+      label: Operating system (optional)
       placeholder: "e.g. Windows 10, macOS Sequoia..."
-    validations:
-      required: false
-
-  - type: textarea
-    id: data_info
-    attributes:
-      label: Data / file information
-      description: "Optional: briefly describe your data or attach a small example file in the issue."
-      placeholder: "e.g. 3 columns (X, Y1, Y2), pasted from CSV..."
-    validations:
-      required: false
-
-  - type: textarea
-    id: screenshots
-    attributes:
-      label: Screenshots
-      description: "Optional: describe or attach screenshots that illustrate your question."
-      placeholder: "If you attach screenshots, mention what each one shows."
     validations:
       required: false
